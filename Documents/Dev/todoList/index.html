@@ -18,14 +18,14 @@
     <![endif]-->
   </head>
   <body>
-    <div ng-controller="mainCtrl">
-      <div id="expression">{{expression}}</div>
-      <button ng-repeat="number in numbers" ng-click="add(number)">
+    <div ng-controller="mainCtrl" class="container center-block text-center col-lg-12">
+      <div id="expression">Expression: <input type="text" ng-model="expression" ng-readonly="checkValidNumbers()" /></div>
+      <button ng-repeat="number in numbers" ng-click="add(number)" class="btn btn-primary">
         {{number}}
       </button>
-      <button ng-click="showResult()">Result</button>
-      <button ng-click="reset()">Reset</button>
-      <div id="result">{{result}}</div>
+      <button ng-click="showResult()" class="btn btn-info">Result</button>
+      <button ng-click="reset()" class="btn btn-info">Reset</button>
+      <div id="result">Result: {{result}}</div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
